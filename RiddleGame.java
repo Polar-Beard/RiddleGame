@@ -32,6 +32,11 @@ public class RiddleGame
       }
     }
 
+    public void printQuestion()
+    {
+      System.out.println(this.question);
+    }
+
     public void add(String step)
     {
       this.nextSteps.add(step);
@@ -49,6 +54,7 @@ public class RiddleGame
     checkpoint1.add("Approach red guard.");
     checkpoint1.add("Approach blue guard.");
     checkpoint1.add("Dip, motherfucker. I ain't got time for this shit.");
+    checkpoint1.printQuestion();
     checkpoint1.printSteps();
 
 
