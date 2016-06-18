@@ -3,9 +3,11 @@ import java.util.ArrayList;
 public class RiddleGame
 {
   private String intro;
+  private ArrayList<Checkpoint> gameCheckpoints;
 
   public RiddleGame(String i){
     this.intro = i;
+    this.gameCheckpoints = new ArrayList<Checkpoint>();
   }
 
   private void printIntro()
@@ -15,6 +17,8 @@ public class RiddleGame
 
   private static class Checkpoint
   {
+    private static int globalID = 0;
+
     private ArrayList<String> nextSteps;
     private String question;
 
