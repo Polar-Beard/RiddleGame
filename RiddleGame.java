@@ -2,33 +2,26 @@ import java.util.ArrayList;
 
 public class RiddleGame
 {
+  private String intro;
 
-  private static class Riddle
+  public RiddleGame(String i){
+    this.intro = i;
+  }
+
+  private void printIntro()
   {
-    private String intro;
-    private String question;
-    private char answer;
-    private ArrayList<String> choices;
-
-    public Riddle(String intro, String question)
-    {
-      this.intro = intro;
-      this.question = question;
-    }
-
-    public void printIntro()
-    {
-      System.out.println(this.intro);
-    }
+    System.out.println(this.intro);
   }
 
   private static class Checkpoint
   {
     private ArrayList<String> nextSteps;
+    private String question;
 
-    public Checkpoint()
+    public Checkpoint(String q)
     {
       this.nextSteps = new ArrayList<String>();
+      this.question = q;
     }
 
     public void printSteps()
@@ -47,10 +40,9 @@ public class RiddleGame
 
   public static void main(String[] args)
   {
-    String intro1 = "You\'re walking through the woods when you see two guards standing before two doors. \nOne is dressed all in red, the other all in blue. \nA sign is posted in front of them, reading \n\"Of these doors before you, one leads to heaven, the other to hell.\n You must pass through the guards to gain entry. \nBut be warned!\nOne guard speaks only truth, and the other nothing but lies.\nYou may ask one guard one question.\"";
-    String question1 = "What do you ask?";
-    Riddle riddle1 = new Riddle(intro1, question1);
-    riddle1.printIntro();
+    String intro = "You\'re walking through the woods when you see two guards standing before two doors. \nOne is dressed all in red, the other all in blue. \nA sign is posted in front of them, reading \n\"Of these doors before you, one leads to heaven, the other to hell.\n You must pass through the guards to gain entry. \nBut be warned!\nOne guard speaks only truth, and the other nothing but lies.\nYou may ask one guard one question.\"";
+    RiddleGame game1 = new RiddleGame(intro);
+    game1.printIntro();
 
     Checkpoint checkpoint1 = new Checkpoint();
     checkpoint1.add("Approach red guard.");
