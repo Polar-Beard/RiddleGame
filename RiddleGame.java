@@ -44,7 +44,8 @@ public class RiddleGame
     RiddleGame game1 = new RiddleGame(intro);
     game1.printIntro();
 
-    Checkpoint checkpoint1 = new Checkpoint();
+    String question1 = "What do you do?";
+    Checkpoint checkpoint1 = new Checkpoint(question1);
     checkpoint1.add("Approach red guard.");
     checkpoint1.add("Approach blue guard.");
     checkpoint1.add("Dip, motherfucker. I ain't got time for this shit.");
