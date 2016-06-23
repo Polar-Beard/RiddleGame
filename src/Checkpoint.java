@@ -2,7 +2,7 @@ public class Checkpoint
 {
   private static int numOfCheckpoints = 0;
 
-  private ArrayList<String> nextSteps;
+  private List<String> nextSteps;
   private String question;
   private int ID;
 

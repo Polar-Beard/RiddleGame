@@ -3,16 +3,21 @@ import java.util.ArrayList;
 public class RiddleGame
 {
   private String intro;
-  private ArrayList<Checkpoint> gameCheckpoints;
+  private ArrayList<Checkpoint> checkpoints;
 
   public RiddleGame(String i){
     this.intro = i;
-    this.gameCheckpoints = new ArrayList<Checkpoint>();
+    this.checkpoints = new ArrayList<Checkpoint>();
   }
 
   private void printIntro()
   {
     System.out.println(this.intro);
+  }
+
+  public void addCheckpoint(Checkpoint c)
+  {
+    checkpoints.add(c);
   }
 
   public static void main(String[] args)
