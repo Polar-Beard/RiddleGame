@@ -9,12 +9,11 @@ public class Checkpoint
     this.paths = new ArrayList<Path>();
   }
 
-  //Takes number of paths to make
-  private void createPaths(int num)
+  private void createPaths(List<String> steps)
   {
-    for(int i = 0; i < num; i++)
+    for(int i = 0; i < steps.size(); i++)
     {
-      paths.add(new Path(this));
+      paths.add(new Path(this, steps.get(i)));
     }
   }
 }
