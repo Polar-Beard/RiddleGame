@@ -1,35 +1,20 @@
 public class Checkpoint
 {
-  private static int numOfCheckpoints = 0;
+  private String prompt;
+  private List<Path> paths;
 
-  private List<String> nextSteps;
-  private String question;
-  private int ID;
-
-  public Checkpoint(String q)
+  public Checkpoint(String prompt)
   {
-    this.nextSteps = new ArrayList<String>();
-    this.question = q;
-    numOfCheckpoints++;
-    this.ID = numOfCheckpoints;
-
+    this.prompt = prompt;
+    this.paths = new ArrayList<Path>();
   }
 
-  public void printSteps()
+  //Takes number of paths to make
+  private void createPaths(int num)
   {
-    for(int i = 0; i < nextSteps.size(); i++)
+    for(int i = 0; i < num; i++)
     {
-      System.out.println((i + 1) + ") " + nextSteps.get(i));
+      paths.add(new Path(this));
     }
-  }
-
-  public void printQuestion()
-  {
-    System.out.println(this.question);
-  }
-
-  public void add(String step)
-  {
-    this.nextSteps.add(step);
   }
 }
