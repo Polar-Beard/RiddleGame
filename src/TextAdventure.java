@@ -1,18 +1,14 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
-public class RiddleGame
+public class TextAdventure
 {
   private List<Checkpoint> masterCheckpoints;
   private List<Path> masterPaths;
 
-  public RiddleGame()
+  public TextAdventure()
   {
     this.masterCheckpoints = new ArrayList<Checkpoint>();
     this.masterPaths = new ArrayList<Path>();
-  }
-
-  private void readInput(File inputFile)
-  {
-    //Get input somehow
   }
 }

@@ -10,7 +10,7 @@ public class Path
     this.step = step;
   }
 
-  public void setDestination(Checkpoint destination)
+  public void   (Checkpoint destination)
   {
     this.destination = destination;
   }
