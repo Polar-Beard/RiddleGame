@@ -1,16 +1,15 @@
 public class TextAdventureGame
 {
-  private final String TITLE_REQUEST_STRING = "Enter a title for your Text Adventure";
-  
-  private void collectGameInput(Scanner in)
-  {
-    System.out.println(TITLE_REQUEST_STRING);
+  private static final String OPENING_DIALOG = "Welcome to Text Adventure! Select one: \n A. Create new game \n B. Load existing game";
 
+  private static void startApplication(Scanner in)
+  {
+    System.out.println(OPENING_DIALOG);
   }
 
-  public void main(String[] args)
+  public static void main(String[] args)
   {
     Scanner in = new Scanner(System.in);
-    collectGameInput(in);
+    startApplication(in);
   }
 }
